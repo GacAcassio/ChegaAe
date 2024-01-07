@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Weather
+{% endblock %}
+
+{% block main %}
+    <div class="brownBack">
+        <table>
+            <tr >
+                <td class="wtd">
+                    <div class="weather">
+                        <b>City:</b> {{location.name}}
+                        <br>
+                        <br>
+                        <b>State:</b> {{location.region}}
+                        <br>
+                        <br>
+                        <b>Country:</b> {{location.country}}
+                        <br>
+                        <br>
+                        <b>Lat:</b> {{location.lat}}
+                        <br>
+                        <br>
+                        <b>Lon:</b> {{location.lon}}
+                    </div>
+                </td>
+                <td  class="wtd">
+                    <div class="weather">
+                        <b>Temperature:</b> {{current.temp_c}} C
+                        <br>
+                        <br>
+                        <b>Feelslike:</b> {{current.feelslike_c}} C
+                        <br>
+                        <br>
+                        <b>Condition:</b> {{condition.text}}
+                        <br>
+                        <br>
+                        <img  style="width:40%; text-align: center"src={{condition.icon}}>
+                    </div>
+                </td>
+                <td  class="wtd">
+                    <div class="weather">
+                        <b>Wind direction:</b> {{current.wind_dir}}
+                        <br>
+                        <br>
+                        <b>Wind velocity:</b> {{current.wind_kph}} kph
+                        <br>
+                        <br>
+                        <b>Humidity:</b> {{current.humidity}} %
+                        <br>
+                        <br>
+                        <b>Cloud:</b> {{current.feelslike_c}} %
+                        <br>
+                        <br>
+                        <b>Ultraviolet light:</b> {{current.uv}}
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}

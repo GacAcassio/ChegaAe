@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Places
+{% endblock %}
+
+{% block main %}
+    <div class="blueBack">
+        {% for place in places %}
+            <br>
+            <div class="forumTopic">
+                <table style="width:100%;">
+                    <tr>
+                        <td>
+                            <img height="120px" src={{place.img}}>
+                        </td>
+                        <td>
+                            <h1>{{place.title}}</h1>
+                            <form method="post" action = "/places">
+                                <input type="hidden" name="id" value={{place.id}}>
+                                <input type="hidden" name="txt" value={{place.txt}}>
+                                <input type="hidden" name="img" value={{place.img}}>
+                                <input type="submit" class="btn" value="View">
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

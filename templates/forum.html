@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Forum
+{% endblock %}
+
+{% block main %}
+    <div class="blueBack">
+        <div class="forumTopic">
+            <table style="width:100%">
+                <tr>
+                    <td style="width:50%">
+                        <h1 class="forumTitle">Forum</h1>
+                    </td>
+                    <td style="width:50%">
+                        <form action="/newtopic" >
+                            <input type="submit" class="btn" value="New Topic">
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        {% for topic in topics%}
+            <br>
+            <div class="forumTopic">
+                <h1>{{topic.subject}}</h1>
+                by: {{topic.username}} on: {{topic.date}}
+                <p>
+                    {{topic.text}}
+                </p>
+
+                <form method="post" action = "/viewtopic">
+                    <input type="hidden" name="idtopic" value={{topic.id}}>
+                    <input type="submit" class="btn" value="View topic">
+                </form>
+
+                {%if session["user_id"] == topic.iduser%}
+                    <form method="post" action = "/forum">
+                        <input type="hidden" name="idtopic" value={{topic.id}}>
+                        <input type="submit" class="btnhome" value="Excluir">
+                    </form>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

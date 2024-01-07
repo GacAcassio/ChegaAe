@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Contact
+{% endblock %}
+
+{% block main %}
+    <div class="blueBack">
+        <form action="/contact" method="POST" class="formModel">
+            <label for="email">Email</label>
+            <input name="email" placeholder="Type your email" autofocus="true">
+            <label for="subject">Subject</label>
+            <input name="subject" placeholder="Subject">
+            <label for="Message">Message</label>
+            <textarea class="txtc" name="message" type="text" placeholder="Type your message"></textarea>
+            <input type="submit" class="btn" value= "Send" >
+        </form>
+    </div>
+{% endblock %}

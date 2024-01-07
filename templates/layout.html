@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="shortcut icon" type="imagex/png" href="./static/icon.ico">
+    <title>Chêga Ae: {% block title %}{% endblock %}</title>
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="navbar">
+                <div class="circle"></div>
+                <a class="text"  href="/"> Chêga Ae </a>
+                <div class="navigation">
+                    <a href="/places" class="nav-link">Places</a>
+                    <a href="/weather" class="nav-link">Weather</a>
+                    <a href="/forum" class="nav-link">Forum</a>
+                    <a href="/about" class="nav-link">About</a>
+                    <a href="/contact" class="nav-link">Contact Us</a>
+                    {% if session["user_id"] %}
+                        <a href="/logout" class="btnlog">Logout</a>
+                    {% else %}
+                        <a href="/login" class="btnlog" >Login </a>
+                    {% endif %}
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="espaco"></div>
+            {% block main %}{% endblock%}
+        </main>
+        <footer class="footer">
+            <div>
+                <a class="af" href="https://cs50.harvard.edu/x">CS50x 2023</a>
+            </div>
+        </footer>
+    </body>
+</html>

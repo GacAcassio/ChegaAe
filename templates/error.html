@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Error
+{% endblock %}
+
+{% block main %}
+    <div class="blueBack">
+        <h1 class="errorMessage">ERROR: {{number}}</h1>
+        <img src="/static/error.svg" height="300px">
+        <h1 class="errorMessage">{{message}}</h1>
+    </div>
+{% endblock %}

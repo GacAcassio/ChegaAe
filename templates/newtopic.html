@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    New topic
+{% endblock %}
+
+{% block main %}
+    <div class="blueBack">
+        <form action="/newtopic" method="POST" class="formModel">
+            <label for="subject">Subject</label>
+            <input name="subject" placeholder="Subject" required>
+            <label for="Main">Main</label>
+            <textarea class="txtc" name="main" type="text" placeholder="Write your topic" required></textarea>
+            <input type="submit" class="btn" value= "Post" >
+        </form>
+    </div>
+{% endblock %}

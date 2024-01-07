@@ -1,0 +1,394 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .navbar {
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 30px 30px;
+    box-sizing: border-box;
+    z-index: 9999;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .circle {
+    width: 100px;
+    height: 100px;
+    background-color: #f49e12;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 50px;
+  }
+
+  .circle:hover {
+    transform: scale(1.05);
+  }
+
+  .text {
+    color: #aa5a00;
+    text-decoration: none;
+    font-family: fantasy;
+    font-size: 58px;
+    align-self: flex-start;
+    margin-left: 20px;
+    margin-bottom: -30px;
+  }
+
+  .history {
+    color: #f49e12;
+    text-decoration: none;
+    font-family: fantasy;
+    font-size: 58px;
+  }
+
+  .text:hover{
+    transform: scale(1.1);
+  }
+
+  .navigation {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .nav-link {
+    color: black;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 20px;
+    font-family: fantasy;
+    margin-top: 58px;
+  }
+
+  .btnlog{
+    color: #f49e12;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 20px;
+    font-family: fantasy;
+    margin-top: 58px;
+  }
+
+  .nav-link:hover {
+    color: #5bb7ec;
+    transform: scale(1.1);
+  }
+
+  .espaco {
+    height: 100px;
+    width: 100%;
+    background-color: #5bb7ec;
+    display: flex;
+    align-items: center;
+  }
+
+  .painel {
+    height: 500px;
+    width: 100%;
+    background-color: #5bb7ec;
+    display: flex;
+    align-items: center;
+  }
+
+  .paineldois {
+    display: flex;
+    flex-direction: column;
+    align-content:center;
+    text-align:center;
+    height: 1000px;
+    width: 100%;
+    background-color: #aa5a00;
+  }
+
+  .footer {
+    align-content: center;
+    text-align: center;
+    padding: 20px;
+    font-family: sans-serif;
+    font-size: 20px;
+    height: 30px;
+    background-color: #white;
+  }
+
+  .container {
+    position: relative;
+    width: 50%;
+    height: 501px;
+  }
+
+  .image {
+    height: 90%;
+    width: auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .intro {
+    text-align: center;
+    padding-top: 20;
+    color: white;
+    font-size: 30px;
+    margin-top: 60px;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+
+.formModel {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 7px;
+  padding: 40px;
+  gap: 5px
+}
+
+.forumTopic{
+  width: 60vw;
+  height: auto;
+  background-color: #fff;
+  border-radius: 7px;
+  padding: 20px;
+  gap: 5px;
+}
+
+.forumTopic form{
+  text-align: right;
+}
+
+.forumTopic h1{
+  padding: 0px;
+}
+
+.forumTopic input{
+  padding: 15px;
+  font-size: 14px;
+  margin-top: 5px;
+  border-radius: 4px;
+  transition: all linear 160ms;
+  outline: none;
+}
+
+.formModel h1 {
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  font-size: 2.3em;
+}
+
+.formModel p {
+  display: inline-block;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.formModel input {
+  padding: 15px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  border-radius: 4px;
+  transition: all linear 160ms;
+  outline: none;
+}
+
+.txtc {
+  resize: none;
+  padding: 15px;
+  height: 100px;
+  width: 60vw;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  border-radius: 4px;
+  transition: all linear 160ms;
+  outline: none;
+}
+
+.txtcmt {
+  resize: none;
+  padding: 15px;
+  height: 100px;
+  width: 96%;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  margin-right: 10%;
+  margin-top: 5px;
+  border-radius: 4px;
+  transition: all linear 160ms;
+  outline: none;
+}
+
+.formModel input:focus {
+  border: 1px solid #5bb7ec;
+}
+
+.formModel label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.formModel a {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 13px;
+  color: #555;
+  transition: all linear 160ms;
+}
+
+.formModel a:hover {
+  color: #5bb7ec;
+}
+
+.btn {
+  background-color: #5bb7ec;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  transition: all linear 160ms;
+  cursor: pointer;
+  margin: 0;
+
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background-color: #f49e12;
+}
+
+  .af{
+    color: black;
+    text-decoration: none;
+  }
+
+  af:link {
+    color:  black;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  af:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  af:hover {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  af:active {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  .btnhome {
+    background-color: #f49e12;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border: none ;
+    transition: all linear 160ms;
+    cursor: pointer;
+    margin: 0 ;
+    align-self: center;
+    padding: 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border-radius: 4px;
+    transition: all linear 160ms;
+    outline: none;
+  }
+
+  .btnhome:hover {
+    transform: scale(1.1);
+  }
+
+  .blueBack{
+    min-height: calc(100vh - 210px);
+    width: 100% -20px;
+    padding: 20px;
+    background-color: #5bb7ec;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display:flex;
+    flex-direction: column;
+
+}
+
+.brownBack{
+  min-height: calc(100vh - 210px);
+  width: 100% - 20px;
+  padding: 20px;
+  background-color: #aa5a00;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  display:flex;
+  flex-direction: column;
+
+}
+
+.divabout{
+  width: 80%;
+  height: calc(100vh - 300px);
+}
+
+.divabout h1{
+    color: #f49e12;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-family: fantasy, serif;
+    font-size: 40px;
+}
+
+.divabout p{
+  font-size: 20px;
+  color: white;
+}
+
+.forumTitle{
+    color: #f49e12;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-family: fantasy, serif;
+    fontt-size: 40px;
+}
+
+.errorMessage{
+  color: black;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-family: fantasy;
+  fontt-size: 10px;
+}
+
+.wtd{
+  padding:30px;
+}
+
+.weather{
+  width: 20vw;
+  height: 30vh;
+  background-color: #fff;
+  border-radius: 7px;
+  padding: 40px;
+  gap: 5px;
+}

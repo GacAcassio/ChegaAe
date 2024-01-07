@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <div class="blueBack">
+        <form method="POST" class="formModel">
+            <h1>Login</h1>
+            {% if flag %}
+            <p style="color : red;"> Dados inválidos</p>
+            {% endif %}
+            <label for="username">Username</label>
+            <input name="username" placeholder="Type your username" autofocus="true" required>
+            <label for="password">Password</label>
+            <input name="password" type="password" placeholder="Type your password" required>
+            <a href="/register">Register</a>
+            <input type="submit" class="btn" value="Login">
+        </form>
+    </div>
+{% endblock %}

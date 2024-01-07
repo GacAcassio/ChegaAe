@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    View topic
+{% endblock %}
+
+{% block main %}
+    <div class="blueBack">
+        <div class="forumTopic">
+            <h1>{{topic.subject}}</h1>
+            by: {{topic.username}} on: {{topic.date}}
+            <p>
+                {{topic.text}}
+            </p>
+            <form method="post" action = "/viewtopic">
+                <input type="hidden" name="idtopic" value={{topic.id}}>
+                <textarea class="txtcmt" name="comment" type="text" placeholder="Write your answer" required></textarea>
+                <input type="submit" class="btn" value="Comment">
+            </form>
+        </div>
+        {% for comment in comments%}
+            <br>
+            <div class="forumTopic">
+                <h2>{{comment.username}} </h2>
+                on:  {{comment.date}}
+                <p>
+                    {{comment.text}}
+                </p>
+                {%if session["user_id"] == comment.iduser%}
+                    <form action ="/viewtopic" method="post">
+                        <input type="hidden" name="exc" value="qualquer">
+                        <input type="hidden" name="idcomment" value={{comment.id}}>
+                        <input type="hidden" name="idtopic" value={{topic.id}}>
+                        <input type="submit" class="btnhome" value="Excluir">
+                    </form>
+                {% endif %}
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <div class="blueBack">
+        <form method="POST" class="formModel">
+            <h1>Register</h1>
+            <label for="username">Username</label>
+            <input name="username" placeholder="Type your unername" autofocus="true">
+            <label for="password">Password</label>
+            <input name="password" type="password" placeholder="Type your password">
+            <label for="password">Confirm your password</label>
+            <input name="confirmation" type="password" placeholder="Confirm your password">
+            <a href="/login">Already have an account</a>
+            <input type="submit" class="btn" value= "Register" >
+        </form>
+    </div>
+{% endblock %}
+

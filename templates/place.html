@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Place
+{% endblock %}
+
+{% block main %}
+    <div class="brownBack">
+        <div class="divabout">
+            <h1>{{place.title}}</h1>
+            {{text}}
+        </div>
+        <div style="width:100%; text-align: right;">
+            <img src={{place.img}} height="300px" style="content-align:bottom">
+        <div>
+    </div>
+{% endblock %}
