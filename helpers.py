@@ -15,6 +15,7 @@ def login_required(f):
 
 
 def getWeather():
+    
     url = f'http://api.weatherapi.com/v1/current.json?key=80a40b56457941e8adc15509233012&q=Cuiaba&aqi=no'
 
     try:
