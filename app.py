@@ -195,8 +195,5 @@ def register():
     else:
         return render_template("register.html")
 
-@app.route("/error")
-def error():
-    return render_template("error.html")
 
 
